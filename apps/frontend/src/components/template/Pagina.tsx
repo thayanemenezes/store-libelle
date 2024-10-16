@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Whatsapp from '../shared/Whatsapp'
 import Cabecalho from './Cabecalho'
 import Rodape from './Rodape'
 
@@ -21,6 +21,7 @@ export default function Pagina(props: PaginaProps) {
                 <main className={`flex-1 flex flex-col ${props.className ?? ''}`}>
                     {props.children}
                 </main>
+                <Whatsapp/>
                 {!props.semRodape && <Rodape />}
             </div>
         </div>

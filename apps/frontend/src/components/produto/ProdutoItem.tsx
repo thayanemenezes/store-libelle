@@ -19,11 +19,11 @@ export default function ProdutoItem(props: ProdutoItemProps) {
             href={`/produto/${props.produto.id}`}
             className="flex flex-col border-white/10 rounded-xl relative max-w-[350px]"
         >
-            <div className="w-full h-52 relative">
+            <div className="w-full h-64 relative">
                 <Image
                     src={produto.imagem}
                     fill
-                    className="object-cover object-center"
+                    className="object-contain"
                     alt="Imagem do Produto"
                 />
             </div>
