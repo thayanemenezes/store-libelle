@@ -1,26 +1,36 @@
-import AvaliacaoEspecializada from '@/components/produto/AvaliacaoEspecializada'
-import AvaliacoesUsuarios from '@/components/produto/AvaliacoesUsuarios'
-import BannerCompra from '@/components/produto/BannerCompra'
+'use client'
+
 import InformacoesProduto from '@/components/produto/InformacoesProduto'
-import MedidorDePreco from '@/components/produto/MedidorDePreco'
 import ProdutoNaoEncontrado from '@/components/produto/ProdutoNaoEncontrado'
-import TituloProduto from '@/components/produto/TituloProduto'
-import { produtos } from '@gstore/core'
+import useProdutos from '@/data/hooks/useProdutos'
+
 
 export default function PaginaProduto(props: any) {
     const id = +props.params.id
+    const { produtos } = useProdutos()
     const produto = produtos.find((produto) => produto.id === id)
 
     return produto ? (
-        <div className="flex flex-col gap-20 container py-10">
+        <div className="flex flex-col gap-20 container py-10 mt-20">
             <div className="flex flex-col gap-10">
-                <TituloProduto produto={produto} />
                 <InformacoesProduto produto={produto} />
-                <BannerCompra produto={produto} />
-                <MedidorDePreco produto={produto} />
+                <div className='flex flex-col'>
+                <span className="py-4 bg-white/5 rounded text-pink-900">{produto.descricao}</span>
+                {produto?.especificacoes &&
+                Object.keys(produto.especificacoes)
+                    .filter((k) => k !== 'destaque')
+                    .map((chave) => (
+                       
+                        <div key={chave} className="flex text-pink-900 ">
+                            <span className="py-1 w-1/3 bg-white/5 rounded font-bold">{chave}</span>
+                            <span className="py-1 w-2/3 bg-white/5 rounded">
+                                {produto.especificacoes[chave]}
+                            </span>
+                        </div>
+                       
+                    ))}
+                </div>
             </div>
-            <AvaliacoesUsuarios produto={produto} />
-            <AvaliacaoEspecializada produto={produto} />
         </div>
     ) : (
         <ProdutoNaoEncontrado />

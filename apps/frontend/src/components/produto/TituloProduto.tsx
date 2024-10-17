@@ -8,8 +8,8 @@ export default function TituloProduto(props: TituloProdutoProps) {
     const { produto } = props
     return (
         <div className="flex flex-col">
-            <div className="text-2xl">{produto?.nome}</div>
-            <div className="font-light text-zinc-400">{produto?.descricao}</div>
+            <div className="text-2xl text-pink-950">{produto?.marca}</div>
+            <div className="font-light text-pink-950">{produto?.descricao}</div>
         </div>
     )
 }

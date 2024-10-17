@@ -30,7 +30,7 @@ export default function ProdutoItem(props: ProdutoItemProps) {
             <div className="flex-1 flex flex-col gap-3 p-5 border-t border-white/10 text-pink-900">
                 <span className="text-lg font-semibold">{produto.nome}</span>
                 <div className="self-start text-sm border-b border-dashed">
-                    {produto.especificacoes.destaque}
+                    {produto.especificacoes.cor}
                 </div>
                 <div className="flex-1"/>
                 <div className="flex flex-col">
