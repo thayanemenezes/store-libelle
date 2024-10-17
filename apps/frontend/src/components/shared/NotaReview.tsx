@@ -20,5 +20,5 @@ export default function NotaReview(props: NotaReviewProps) {
         return estrelas
     }
 
-    return <div className="flex gap-0.5 text-emerald-400">{notaParaEstrelas(props.nota)}</div>
+    return <div className="flex gap-0.5 text-pink-600">{notaParaEstrelas(props.nota)}</div>
 }
