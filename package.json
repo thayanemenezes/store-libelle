@@ -1,5 +1,5 @@
 {
-  "name": "gam3r.store",
+  "name": "store-libelle",
   "private": true,
   "scripts": {
     "build": "turbo build",

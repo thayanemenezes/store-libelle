@@ -7,8 +7,8 @@ const font = Montserrat({
 })
 
 export const metadata: Metadata = {
-    title: 'Gam3r.store',
-    description: 'Versão completa da loja Gam3r.store',
+    title: 'Loja Libelle',
+    description: 'Calçados femininos e masculinos',
 }
 
 export default function RootLayout({

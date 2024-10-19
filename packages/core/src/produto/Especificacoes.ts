@@ -1,4 +1,4 @@
 export default interface Especificacoes {
     destaque: string
-    [chave: string]: string | number | boolean
+    [chave: string]: string | number | boolean | string[]
 }

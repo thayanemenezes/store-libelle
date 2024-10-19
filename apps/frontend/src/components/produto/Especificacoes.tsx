@@ -16,7 +16,6 @@ export default function Especificacoes(props: EspecificacoesProps) {
           <TituloProduto produto={produto} />
           <AvaliacoesUsuarios produto={produto} />
           <BannerCompra produto={produto} />
-          
         </div>
     ) : null
 }
