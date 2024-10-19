@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <div>
-            <div className='w-full'>
+            <div className='w-full mt-20'>
                 <Image src={'/banner-libelle.jpg'} alt='banner' width={1500} height={0}/>
             </div>
         <div className="flex-1 flex flex-col container gap-5 py-10"> 

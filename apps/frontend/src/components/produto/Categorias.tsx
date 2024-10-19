@@ -9,12 +9,12 @@ const categorias = [
 
 export default function Categorias() {
   return (
-    <div className='flex gap-6 w-full justify-center'>
-        {categorias.map((value, index) => {
+    <div className='flex flex-wrap lg:flex-row gap-2 lg:gap-6 w-full justify-center'>
+        {categorias.map((value, index) => { 
             return(
-                <div key={index} className='flex flex-col items-center rounded-full'>
-                    <Image className='rounded-full' src={value.image} alt='categoria imagem' width={90} height={0}/>
-                    <h4 className='text-pink-900 mt-2'>{value.nome}</h4>
+                <div key={index} className='flex md:flex-auto lg:flex-none flex-col items-center rounded-full cursor-pointer'>
+                    <Image className='rounded-full lg:w-90 md:w-4/6' src={value.image} alt='categoria imagem' width={90} height={0}/>
+                    <h4 className='text-pink-900 mt-2 lg:text-xl text-sm'>{value.nome}</h4>
                 </div>
             )
         })}
